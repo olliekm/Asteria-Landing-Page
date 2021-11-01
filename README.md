@@ -1,4 +1,4 @@
-# AsteriaLandingPage
+# Asteria Landing Page
 Landing page for "Asteria" product management software as a service.
 
 
