@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Asteria</title>
+    <script src="index.js"></script>
+
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li onclick="Home()">Home</li>
+            <li onclick="About()">About</li>
+            <li onclick="Contact()">Contact</li>
+            <li><a href="https://dixonandmoe.com/rellax/?utm_source=cdnjs&utm_medium=cdnjs_link&utm_campaign=cdnjs_library#HorParlx" target="_blank" style="text-decoration: none; color: rgb(215, 215, 255);
+                " >Login</a></li>
+        </ul>
+    </div>
+    <nav>
+        <h1 class="logo">ASTERIA</h1>
+        <ul class="navList">
+            <li onclick="Home()">Home</li>
+            <li onclick="About()">About</li>
+            <li onclick="Contact()">Contact</li>
+            <li><a href="https://dixonandmoe.com/rellax/?utm_source=cdnjs&utm_medium=cdnjs_link&utm_campaign=cdnjs_library#HorParlx" target="_blank"><button  class="login">Login</button></a></li>
+        </ul>
+        <i class="fas fa-bars fa-2x" onclick="toggleMenu()"></i>
+    </nav>
+    <div class="main">
+        <h1 class="rellax" data-rellax-speed="10">A cloud based multiplatform <br> product management software.</h1>
+    </div>
+    <div class="about">
+        <h1>What does that mean?</h1>
+        <p>Our service allows you to manage your  business <br> from your smartphone or computer anywhere in the world with ease.</p>
+        <ul>
+            <li><i class="fas fa-cog"></i> Easily add or delete products</li>
+            <li><i class="fas fa-truck-moving"></i> Track current inventory</li>
+            <li><i class="fas fa-money-check-alt"></i> Keep track of employee pay</li>
+            <li><i class="fas fa-mobile-alt"></i> Access with smart device</li>
+            <li><i class="fas fa-users"></i> Allow multiple employees to manage</li>
+            <li><i class="fas fa-chart-line"></i> View data and statistics of sales, inventory and <br> profit in comprehensive charts with AI suggestions</li>
+        </ul>
+    </div>
+    <div class="contact">
+        <h1>Lets get to work!</h1>
+        <div class="contactform">
+            <input type="text" placeholder="Name...">
+            <input type="text" placeholder="Email...">
+            <button>Submit</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+
+    <script>
+       var rellax = new Rellax('.rellax', {
+            horizontal:true
+        });
+        var $nav = $('nav'),
+        $win = $(window),
+        winH = $win.height();    // Get the window height.
+
+        $win.on("scroll", function () {
+        $nav.toggleClass("dark", $(this).scrollTop() > winH );
+        }).on("resize", function(){ // If the user resizes the window
+        winH = $(this).height(); // you'll need the new height value
+        });
+    </script>
+</body>
+</html>
